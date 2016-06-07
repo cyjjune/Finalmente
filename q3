@@ -1,18 +1,24 @@
 333333333
 
 A.  Explain how digital signature works with public/private keypairs.
-
+The private key is used as the input to the algorithm which transforms the data being signed. The data could be accessed by the use of the originator's public key. The public key can is given to the recipent by the originator. 
 B.  Identify your favorite Java project this semester.  
+    Mitochondrial Eve
     Describe two things you learned by doing the project.
+    By doing this project, I learned how to randomly esitmate the number of some specific thing from a large group. 
     Describe two ways in which the project could be improved or expanded.
-    
+    Males could also inherit eve's mitochondria. We can add more characteristics to the descendants of Eve, so we can have more accurate estimation.
 C.  Describe two advantages of object-oriented programming.
+    We can split up the program for each member in the group. More efficient. 
     Describe two disadvantages of object-oriented programming.
-    
+    Object-oriented programs are larger than other programs, therefore slower than others.
 D.  Consider the following PYTHON code for the MNode class given below.
     What is the difference in the way Python and Java handle the declaration of datatypes?
+    In Java, we declare the return type in the first line of the method, whereas in Python we don't need to specify the return type int each function.
     Explain the difference in how constructors are written in Python vs Java.
+    In Java, the name of the constructor has to match the name of the class, and we need to overload the constrcutor for different fields. In Python, we write 'init' as the name of the constructor and we only write one constructor. 
     Which language do you prefer?  Explain why.
+    I prefer Python, because its 'grammar' is not as complicated as Java. Although projects that are written in Java is more understandable and more specific, it takes more time to write programs that can give the same output in Python.
 -------------------------------------------------------------------------------------
     import hashlib
 
