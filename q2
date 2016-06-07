@@ -1,14 +1,48 @@
 2222222222222
 
 A.  Explain what recursion is and when it is useful.
+Recursion is a programming technique one invokes the method inside the body of the method.
     Explain what the |termination step| and |recursion step| are in a recursive method.
-
+The termination step in a recursive method is when certain conditions are met, the method stops calling itself and starts to return values.
+The recursion step is the part of the method that keeps calling itself until it meets certain condition. Recursion steps are in the form of 'if-else' statements.
 B.  Describe the difference between a Queue and a Stack.
-
+In a queue, we remove the element that is first added; in a stack, we remove the element recent added.
 C.  Write a class for an element doublely-linked list.
+public class DLnkList{
+  
+  private DLnk head = new DLnk();
+  public int length = 0;
+  
+  public DLnkList(){}
+  
+  public void addDLnk(DLnk newlink){
+    newlink.setNext(this.head);
+    this.head.setPrev(newlink);
+    this.head=newlink;
+    length=length + 1;}
 
-D.  Explain what a Merkle Tree is.  
+  public DLnk getiLnk(int i){
+    DLnk it = this.head;
+    while(i>0){
+      it=it.getNext();
+      i=i-1;}
+    return it;}
+  
+  public void removeHead(){
+    this.head=this.head.getNext();
+    this.head.setPrev(null);
+    length = length -1;}
+  
+  public DLnk getHead(){
+    return this.head;}
+   
+}
+D.  Explain what a Merkle Tree is. 
+A merkle tree is a tree in which every non leaf nodes are labelled with the hash code of the leaves. Nodes further up in the trees are the hashes of their respective children.
     Describe the structure and purpose of a Merkle Tree.
+At the base of the tree is unhashed data, which are the 'leaves objects'. As the tree grows further up, the leaves are hash in pairs and the hash codes of the leaves build up the tree. At the top of the tree, we return the hash code of the lowered two hash codes.
     What is the Merkle root?
+Merkle root is the hash code of the lowered two hash codes. It is located at the top of the tree.
     What is the function of a certificate in this data structure?
-    
+The number of possible leaves(N) has to be a power of two. 
+N=2^n
